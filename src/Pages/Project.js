@@ -18,7 +18,7 @@ function Project() {
                             This project proposes an website to rent or sale the home or land property, It comes under mern stack.
                             It helps to people to buy or sell the property through an online.  
                         </p>
-                        <a href="https://property provision.onrender.com/">Project Live</a>
+                        <a href="https://property-provision.onrender.com/">Project Live</a>
                     </div>
                 </div>
                 <div className='project-img'>

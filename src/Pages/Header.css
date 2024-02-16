@@ -1,0 +1,93 @@
+.header-view{
+    background-color: #264346;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 2px 6px #FFFEF8;
+}
+.header-view.fixed{
+    box-shadow: 0px 2px 6px #0D2123;
+    background-color: #0D2123;
+    transition: 0.6s ease-in-out;
+}
+.header-h1-logo{
+    margin: 0;
+    font-size: 2.125rem;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    text-transform: uppercase;
+    background: repeating-radial-gradient(ellipse farthest-corner at center center, #4A5858 0%, #FFFEF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+.header-ul-page, .header-ul-link{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #FFFEF8;
+    cursor: pointer;
+}
+.header-ul-page li, .header-ul-link li{
+    position: relative;
+}
+.header-ul-page li::after, .header-ul-link li::after{
+    content: '';
+    height: 2px;
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    background-color: #FFFEF8;
+    transition: 500ms;
+}
+.header-ul-page li:hover::after, .header-ul-link li:hover::after{
+    width: 100%;
+}
+.header-ul-link li a{
+    text-decoration: none;
+    color: #FFFEF8;
+}
+.header-li-nav{
+    text-decoration: none;
+    color: #FFFEF8;
+
+}
+
+@media (max-width: 900px){
+    .header-h1-logo{
+        font-size: 1.5rem;
+    }
+    .header-ul-page, .header-ul-link{
+        gap: 0.5rem;
+        font-size: 1rem;
+        letter-spacing: normal;
+    }
+}
+@media (max-width: 688px){
+    .header-ul-page{
+        display: none;
+    }
+}
+@media (max-width: 500px){
+    .header-h1-logo{
+        font-size: 1rem;
+    }
+    .header-ul-page, .header-ul-link{
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 380px){
+    .header-h1-logo{
+        font-size: 0.8rem;
+    }
+    .header-ul-page, .header-ul-link{
+        font-size: 0.5rem;
+    }
+}

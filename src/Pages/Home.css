@@ -1,0 +1,136 @@
+.home-view{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    background-color: #264346;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 600px;
+    margin-bottom: 2rem;
+}
+.home-left{
+    width: 40%;
+    text-align: center;
+    animation: UptoDowm 4s ease;
+}
+@keyframes UptoDowm {
+    0%{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.home-right{
+    width: 60%;
+    padding: 0 1rem;
+    animation: RighttoLeft 2s ease-in;
+}
+@keyframes RighttoLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.home-img{
+    width: 400px;
+    background-color: #264346;
+    border-radius: 27% 73% 70% 30% / 30% 38% 62% 70% ;
+    transition: border-radius 900ms ease-in-out;
+    filter: drop-shadow(16px 12px 5px #0D2123 );
+    cursor: pointer;
+}
+.home-img:hover{
+    border-radius: 76% 24% 45% 55% / 47% 33% 67% 53% ;
+
+}
+.home-box{
+    width: 100px;
+}
+.home-h1-me{
+    font-size: 4rem;
+    color: #e7e5da;
+    margin: 0;
+}
+.home-h5-me{
+    font-size: 2rem;
+    color: #F8CFA9;
+    margin: 0;
+    font-weight: 200;
+}
+.home-p-me{
+    font-size: 1.25rem;
+    color: #FFFEF8;
+    text-align: justify;
+}
+.home-button{
+    padding: 1rem;
+    border-radius: 15px 3px 15px 3px;
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #FFFEF8;
+    background-color: #0D2123;
+    cursor: pointer;
+}
+.home-button:hover{
+    color: #0D2123;
+    background-color: #FFFEF8;
+    box-shadow: 0 8px 8px #0D2123;
+}
+@media (max-width: 1080px){
+    .home-img{
+        width: 300px;
+    }
+    .home-h1-me{
+        font-size: 2rem;
+    }
+    .home-h5-me{
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
+    .home-p-me{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 775px){
+    .home-img{
+        width: 250px;
+    }
+    .home-h1-me{
+        font-size: 2rem;
+    }
+    .home-h5-me{
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
+    .home-p-me{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 590px){
+    .home-view{
+        flex-direction: column;
+        height: 550px;
+    }
+    .home-left{
+        padding-top: 3rem;
+        width: 100%;
+    }
+    .home-right{
+        padding: 1rem;
+        width: 90%;
+    }
+}

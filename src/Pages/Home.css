@@ -29,6 +29,7 @@
 .home-right{
     width: 60%;
     padding: 0 1rem;
+    
     animation: RighttoLeft 2s ease-in;
 }
 @keyframes RighttoLeft {
@@ -109,16 +110,6 @@
     .home-img{
         width: 250px;
     }
-    .home-h1-me{
-        font-size: 2rem;
-    }
-    .home-h5-me{
-        font-size: 1.5rem;
-        font-weight: 100;
-    }
-    .home-p-me{
-        font-size: 0.8rem;
-    }
 }
 @media (max-width: 590px){
     .home-view{
@@ -126,11 +117,27 @@
         height: 550px;
     }
     .home-left{
-        padding-top: 3rem;
+        padding-top: 4rem;
         width: 100%;
     }
     .home-right{
-        padding: 1rem;
+        padding: 0.7rem;
         width: 90%;
+    }
+}
+@media (max-width:450px){
+    .home-button{
+        padding: 0.5rem;
+        font-size: 0.5rem;
+        letter-spacing: 0rem;
+        font-weight: 500;
+    }
+    
+    .home-h1-me{
+        font-size: 1.5rem;
+    }
+    .home-h5-me{
+        font-size: 1rem;
+        font-weight: 100;
     }
 }

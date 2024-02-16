@@ -1,8 +1,17 @@
 import React, { useRef, useState } from "react";
 import "./Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleCheck, faEnvelope, faLocationDot,  faPhone } from "@fortawesome/free-solid-svg-icons";
-import emailjs from '@emailjs/browser';
+import {
+  faCircleCheck,
+  faEnvelope,
+  faLocationDot,
+  faPhone,
+} from "@fortawesome/free-solid-svg-icons";
+import emailjs from "@emailjs/browser";
+import icon1 from "../Assets/linkedin.ico";
+import icon2 from "../Assets/github.ico";
+import icon3 from "../Assets/leetcode.ico";
+import icon4 from "../Assets/instagram.ico";
 
 function Contact() {
   const [Done, setDone] = useState(false);
@@ -12,8 +21,8 @@ function Contact() {
     e.preventDefault();
     setDone(false);
     emailjs
-      .sendForm('service_ped7p39', 'template_1hmcqeg', form.current, {
-        publicKey: 'DU1eh18ZiQy0EWPgN',
+      .sendForm("service_ped7p39", "template_1hmcqeg", form.current, {
+        publicKey: "DU1eh18ZiQy0EWPgN",
       })
       .then(
         () => {
@@ -21,7 +30,7 @@ function Contact() {
         },
         (error) => {
           setDone(false);
-        },
+        }
       );
   };
   return (
@@ -37,7 +46,13 @@ function Contact() {
             </div>
             <div className="contact-text">
               <h3>Address</h3>
-              <p>4/258 D, Bharathi Nagar,<br/>N.G.O Colony, Sattur,<br/>Tamilnadu, India.</p>
+              <p>
+                4/258 D, Bharathi Nagar,
+                <br />
+                N.G.O Colony, Sattur,
+                <br />
+                Tamilnadu, India.
+              </p>
             </div>
           </div>
           <div className="contact-box">
@@ -51,11 +66,33 @@ function Contact() {
           </div>
           <div className="contact-box">
             <div className="contact-icon">
-              <FontAwesomeIcon icon={faPhone}/>
+              <FontAwesomeIcon icon={faPhone} />
             </div>
             <div className="contact-text">
               <h3>Phone</h3>
               <p>+91 9360849334</p>
+            </div>
+          </div>
+          <div className="contact-box">
+            <div className="contact-id-icon">
+              <a href="https://github.com/SOLOMON-03">
+                <img src={icon2} alt="" />
+              </a>
+            </div>
+            <div className="contact-id-icon">
+              <a href="https://www.linkedin.com/in/solomon-a-009bb621a/">
+                <img src={icon1} alt="" />
+              </a>
+            </div>
+            <div className="contact-id-icon">
+              <a href="https://leetcode.com/Solomon_A/">
+                <img src={icon3} alt="" />
+              </a>
+            </div>
+            <div className="contact-id-icon">
+              <a href="https://www.instagram.com/solomon.a__/">
+                <img src={icon4} alt="" />
+              </a>
             </div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 function Header() {
     const [fix, setFix] = useState(false);
     function setFixed(){
-        if(window.scrollY >= 540){
+        if(window.scrollY >= 530){
             setFix(true)
         }
         else{

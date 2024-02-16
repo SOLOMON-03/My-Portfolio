@@ -57,7 +57,6 @@
 .header-li-nav{
     text-decoration: none;
     color: #FFFEF8;
-
 }
 
 @media (max-width: 900px){
@@ -70,24 +69,16 @@
         letter-spacing: normal;
     }
 }
+@media (max-width: 376px){
+    .header-h1-logo{
+        font-size: 1.2rem;
+    }
+    .header-ul-page, .header-ul-link{
+        font-size: 0.8rem;
+    }
+}
 @media (max-width: 688px){
-    .header-ul-page{
+    .header-ul-link{
         display: none;
-    }
-}
-@media (max-width: 500px){
-    .header-h1-logo{
-        font-size: 1rem;
-    }
-    .header-ul-page, .header-ul-link{
-        font-size: 0.7rem;
-    }
-}
-@media (max-width: 340px){
-    .header-h1-logo{
-        font-size: 0.7rem;
-    }
-    .header-ul-page, .header-ul-link{
-        gap: 0.3rem;
     }
 }

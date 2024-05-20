@@ -28,7 +28,7 @@ function Header() {
         <div className='header-link'>
             <ul className='header-ul-link'>
                 <li><a href='https://github.com/SOLOMON-03'>GitHub</a></li>
-                <li><a href='https://www.linkedin.com/in/solomon-a-009bb621a/'>LinkedIn</a></li>
+                <li><a href='https://www.linkedin.com/in/solomon-a-69396b306/'>LinkedIn</a></li>
                 <li><a href='https://leetcode.com/Solomon_A/'>LeetCode</a></li>
                 <li><a href='https://www.instagram.com/solomon.a__/'>Instagram</a></li>
             </ul>

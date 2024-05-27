@@ -2,7 +2,7 @@ import React from 'react'
 import img1 from '../Assets/pexels-pixabay-39284.jpg';
 import img2 from '../Assets/pexels-pixabay-163100.jpg';
 import img3 from '../Assets/pexels-pixabay-265087.jpg';
-import './Project.css';
+import './styles/Project.css';
 
 function Project() {
   return (

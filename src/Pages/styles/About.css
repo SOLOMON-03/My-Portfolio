@@ -1,21 +1,10 @@
 .about-me-row{
     display: flex;
     justify-content: space-between;
-    padding: 3rem;
+    padding: 3rem 6rem;
 }
 .about-me-left{
     flex-basis: 60%;
-    animation: LefttoRight 2s ease-in;
-}
-@keyframes LefttoRight {
-    0%{
-        opacity: 0;
-        transform: translateX(-40px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 .about-me-title{
     margin: 0;
@@ -28,20 +17,7 @@
 }
 .about-me-right{
     flex-basis: 35%;
-    animation: UptoDown 4s ease;
-}
-@keyframes UptoDown {
-    0%{
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    50%{
-        transform: translateY(40px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
+    justify-content: right;
 }
 .about-me-right img{
     width: 400px;

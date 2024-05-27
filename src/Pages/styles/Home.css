@@ -11,36 +11,10 @@
 .home-left{
     width: 40%;
     text-align: center;
-    animation: UptoDowm 4s ease;
-}
-@keyframes UptoDowm {
-    0%{
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    50%{
-        transform: translateY(40px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 .home-right{
     width: 60%;
     padding: 0 1rem;
-    
-    animation: RighttoLeft 2s ease-in;
-}
-@keyframes RighttoLeft {
-    0%{
-        opacity: 0;
-        transform: translateX(40px);
-    }
-    100%{
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 .home-img{
     width: 400px;
@@ -84,13 +58,19 @@
     font-weight: 600;
     color: #FFFEF8;
     background-color: #0D2123;
+    box-shadow: 3px 4px 8px #FFFEF8;
     cursor: pointer;
+    scale: 1;
 }
 .home-button:hover{
+    rotate: 3deg;
+    scale: 1.05;
     color: #0D2123;
     background-color: #FFFEF8;
-    box-shadow: 0 8px 8px #0D2123;
+    box-shadow: 3px 8px 8px #0D2123;
+    transition: 0.6s ease-in-out;
 }
+
 @media (max-width: 1080px){
     .home-img{
         width: 300px;

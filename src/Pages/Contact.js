@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import "./Contact.css";
+import "./styles/Contact.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
@@ -12,6 +12,7 @@ import icon1 from "../Assets/linkedin.ico";
 import icon2 from "../Assets/github.ico";
 import icon3 from "../Assets/leetcode.ico";
 import icon4 from "../Assets/instagram.ico";
+import { motion } from "framer-motion"
 
 function Contact() {
   const [Done, setDone] = useState(false);
@@ -112,7 +113,19 @@ function Contact() {
               <span>Type your Message...</span>
             </div>
             <div className="contact-input">
-              <input type="submit" value="send" />
+              <motion.input 
+                whileHover={{
+                  scale: 1.05
+                }}
+                whileTap={{
+                  scale: 0.85,
+                  rotate: "3deg",
+                }}
+                transition={{
+                  duration: 0.125,
+                  ease:"easeInOut"
+                }}
+                type="submit" value="send" />
             </div>
             {Done && (
               <div className="contact-success">

@@ -1,4 +1,4 @@
-.contact-details{
+.contact-details {
     position: relative;
     min-height: 100vh;
     padding: 0 100px;
@@ -8,99 +8,117 @@
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.content-h1{
+
+.content-h1 {
     max-width: 800px;
     text-align: center;
 }
-.content-h1 h1{
+
+.content-h1 h1 {
     font-size: 2rem;
     font-weight: 600;
-    color: #264346;
+    color: #ACC8E5;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
 }
-.contact-container{
+
+.contact-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
 }
-.contact-container .contact-info{
+
+.contact-container .contact-info {
     width: 50%;
     display: flex;
     flex-direction: column;
 }
-.contact-container .contact-info .contact-box{
+
+.contact-container .contact-info .contact-box {
     position: relative;
     padding: 20px 0;
     display: flex;
     gap: 1rem;
 }
-.contact-container .contact-info .contact-box .contact-icon{
+
+.contact-container .contact-info .contact-box .contact-icon {
     min-width: 60px;
     height: 60px;
-    background: #0D2123;
+    background: #ACC8E5;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     font-size: 22px;
-    color: #FFFEF8;
+    color: #112A46;
 }
-.contact-id-icon img{
+
+.contact-id-icon img {
     width: 50px;
     cursor: pointer;
     transition: 0.6s ease-in-out;
 }
-.contact-id-icon img:hover{
-    filter: drop-shadow(1px 6px 8px #0D2123);
+
+.contact-id-icon img:hover {
+    filter: drop-shadow(1px 6px 8px #ACC8E5);
     transform: scale(1.1);
 }
-.contact-container .contact-info .contact-box .contact-text{
+
+.contact-container .contact-info .contact-box .contact-text {
     display: flex;
     margin-left: 20px;
     font-size: 16px;
-    color: #4A5858;
+    color: #f4f1de;
     flex-direction: column;
     font-weight: 300;
 }
-.contact-container .contact-info .contact-box .contact-text h3{
+
+.contact-container .contact-info .contact-box .contact-text h3 {
     margin: 0;
     font-weight: 500;
-    color: #264346;
+    color: #ACC8E5;
 }
-.contact-container .contact-info .contact-box .contact-text p{
+
+.contact-container .contact-info .contact-box .contact-text p {
     margin-top: 10px;
     line-height: 1.5rem;
 }
-.contact-personal{
+
+.contact-personal {
     width: 40%;
     padding: 40px;
-    background: #fff;
+    background: #f4f1de;
 }
-.contact-personal h2{
+
+.contact-personal h2 {
     font-size: 30px;
-    color: #0D2123;
+    color: #112A46;
     font-weight: 500;
     text-align: center;
 }
-.contact-personal .contact-input{
+
+.contact-personal .contact-input {
     position: relative;
     margin-top: 10px;
     width: 100%;
 }
-.contact-personal .contact-input input, .contact-personal .contact-input textarea{
+
+.contact-personal .contact-input input,
+.contact-personal .contact-input textarea {
     width: 100%;
     padding: 15px 0;
     font-size: 16px;
     margin: 10px 0;
     border: none;
-    border-bottom:2px solid #264346;
+    border-bottom: 2px solid #112A46;
     outline: none;
     resize: none;
+    background: transparent;
 }
-.contact-personal .contact-input span{
+
+.contact-personal .contact-input span {
     position: absolute;
     left: 0;
     padding: 15px 0;
@@ -109,25 +127,28 @@
     pointer-events: none;
     transition: 0.5s;
     color: #4A5858;
-}  
-.contact-personal .contact-input input:focus ~ span,
-.contact-personal .contact-input input:valid ~ span,
-.contact-personal .contact-input textarea:focus ~ span,
-.contact-personal .contact-input textarea:valid ~ span{
-    color: #F8CFA9;
+}
+
+.contact-personal .contact-input input:focus~span,
+.contact-personal .contact-input input:valid~span,
+.contact-personal .contact-input textarea:focus~span,
+.contact-personal .contact-input textarea:valid~span {
+    color: #112A46;
     font-size: 12px;
     transform: translateY(-20px);
 }
-.contact-personal .contact-input input[type="submit"]{
+
+.contact-personal .contact-input input[type="submit"] {
     width: 100px;
-    background-color: #0D2123;
+    background-color: #112A46;
     color: #FFFEF8;
     border: none;
     cursor: pointer;
     padding: 10px;
     font-size: 18px;
 }
-.contact-success{
+
+.contact-success {
     font-size: 14px;
     color: #0da20d;
     display: flex;
@@ -135,7 +156,8 @@
     align-items: center;
     gap: 1rem;
 }
-.contact-Error{
+
+.contact-Error {
     font-size: 14px;
     color: #db1f1f;
     display: flex;
@@ -143,69 +165,89 @@
     align-items: center;
     gap: 1rem;
 }
-@media (max-width:991px){
-    .contact-details{
+
+@media (max-width:991px) {
+    .contact-details {
         padding: 50px;
     }
-    .contact-container{
+
+    .contact-container {
         flex-direction: column;
     }
-    .contact-container .contact-info{
+
+    .contact-container .contact-info {
         margin-bottom: 40px;
     }
-    .contact-container .contact-info, .contact-personal{
+
+    .contact-container .contact-info,
+    .contact-personal {
         width: 100%;
     }
 }
-@media (max-width:440px){
-    .contact-details{
+
+@media (max-width:440px) {
+    .contact-details {
         padding: 30px;
     }
-    .contact-container .contact-info, .contact-personal{
-        width: 70%;
+
+    .contact-container .contact-info,
+    .contact-personal {
+        width: 100%;
     }
-    .content-h1 h1{
+
+    .content-h1 h1 {
         font-size: 2rem;
         letter-spacing: 0.1rem;
     }
-    .contact-container{
+
+    .contact-container {
         margin-top: 20px;
     }
-    .contact-container .contact-info .contact-box{
+
+    .contact-container .contact-info .contact-box {
         position: relative;
         padding: 10px 0;
         display: flex;
     }
-    .contact-container .contact-info .contact-box .contact-icon{
+
+    .contact-container .contact-info .contact-box .contact-icon {
         min-width: 40px;
         height: 40px;
         font-size: 18px;
     }
-    .contact-container .contact-info .contact-box .contact-text h3{
+
+    .contact-container .contact-info .contact-box .contact-text h3 {
         font-size: 1rem;
     }
-    .contact-container .contact-info .contact-box .contact-text p{
+
+    .contact-container .contact-info .contact-box .contact-text p {
         font-size: 0.7rem;
         line-height: 1rem;
     }
-    .contact-personal h2{
+
+    .contact-personal h2 {
         font-size: 20px;
     }
-    .contact-personal .contact-input input, .contact-personal .contact-input textarea{
+
+    .contact-personal .contact-input input,
+    .contact-personal .contact-input textarea {
         padding: 10px 0;
         font-size: 14px;
     }
-    .contact-personal .contact-input span{
+
+    .contact-personal .contact-input span {
         padding: 10px 0;
         font-size: 14px;
     }
-    .contact-personal .contact-input input:focus ~ span,
-    .contact-personal .contact-input input:valid ~ span,
-    .contact-personal .contact-input textarea:focus ~ span,
-    .contact-personal .contact-input textarea:valid ~ span{
+
+    .contact-personal .contact-input input:focus~span,
+    .contact-personal .contact-input input:valid~span,
+    .contact-personal .contact-input textarea:focus~span,
+    .contact-personal .contact-input textarea:valid~span {
         font-size: 10px;
     }
-    .contact-id-icon img{
+
+    .contact-id-icon img {
         width: 40px;
     }
 }

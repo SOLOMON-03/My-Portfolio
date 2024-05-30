@@ -4,96 +4,98 @@ import img4 from "../Assets/image.png";
 import { motion } from "framer-motion";
 
 function About() {
-    const [openTab, setOpenTab] = useState(1);
-    const toggleTab = (index) => {
-        setOpenTab(index);
-    };
-    const leftAnimate = (time)=>{
-        return({
-        offscreen: {
-            y: -30,
-            opacity: 0,
-        },
-        onscreen: {
-            y: 0,
-            opacity: 1,
-            transition: {
-                duration: 2,
-                type: "spring",
-                bounce:0.2,
-                delay:time
+    // const [openTab, setOpenTab] = useState(1);
+    // const toggleTab = (index) => {
+    //     setOpenTab(index);
+    // };
+    const leftAnimate = (time) => {
+        return {
+            offscreen: {
+                y: -30,
+                opacity: 0,
             },
-        },
-        })
-    };
-    const rightAnimate = ()=>{
-        return({
-        offscreen: {
-            x: -300,
-            opacity: 0,
-        },
-        onscreen: {
-            x: 0,
-            opacity: 1,
-            transition: {
-                duration: 2,
-                bounce:0.2,
-                type: "spring",
-                delay:4
+            onscreen: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                    duration: 1,
+                    type: "spring",
+                    bounce: 0.2,
+                    delay: time,
+                },
             },
-        },
-        })
+        };
     };
-    
-    function timing(time){
-        return(
-            {
-            start:{
-                x:100,
-                opacity:0,
+    const rightAnimate = () => {
+        return {
+            offscreen: {
+                x: -300,
+                opacity: 0,
             },
-            run:{
-                x:0,
-                opacity:1,
-                transition:{
-                    type:"spring",
-                    bounce:0.5,
-                    duration:1.2,
-                    ease:"easeInOut",
-                    delay:time
-                }
-            }
-            }
-        )
-    }
+            onscreen: {
+                x: 0,
+                opacity: 1,
+                transition: {
+                    duration: 1,
+                    bounce: 0.2,
+                    type: "spring",
+                    delay: 1,
+                },
+            },
+        };
+    };
+
+    // function timing(time){
+    //     return(
+    //         {
+    //         start:{
+    //             x:100,
+    //             opacity:0,
+    //         },
+    //         run:{
+    //             x:0,
+    //             opacity:1,
+    //             transition:{
+    //                 type:"spring",
+    //                 bounce:0.5,
+    //                 duration:1.2,
+    //                 ease:"easeInOut",
+    //                 delay:time
+    //             }
+    //         }
+    //         }
+    //     )
+    // }
     return (
         <>
             <motion.div
                 initial="offscreen"
                 whileInView="onscreen"
-                viewport={{ once: true, amount: 1 }}
-                className="about-me-container"
+                viewport={{ once: false, amount: 0.2 }}
+                className="about-me-container m-24 flex justify-center items-center"
                 id="about"
             >
                 <motion.div className="about-me-row">
                     <motion.div className="about-me-left">
-                        <motion.h1 variants={leftAnimate(1)} className="about-me-title">
+                        <motion.h1 variants={leftAnimate(0.3)} className="about-me-title">
                             About Me
                         </motion.h1>
-                        <motion.p className="about-me-p" variants={leftAnimate(2)}>
+                        <motion.p className="about-me-p" variants={leftAnimate(0.6)}>
                             I am a highly motivated individual with a strong educational
                             background and a passion for continuous learning. Holding a
                             Bachelor of Engineering from Karpagam college of Engineering, I
                             have honed my skills in MERN stack and developed a web
-                            Application. My academic journey has equipped me with a keen
-                            analytical mindset and a thirst for knowledge. I am particularly
-                            drawn to an Developer and aspire to contribute my expertise to
-                            innovative projects. With a genuine interest in Fullstack
-                            developer, I am excited about the prospect of combining my
-                            academic knowledge with practical applications in a professional
-                            setting.
+                            Application.
                         </motion.p>
-                        <motion.div variants={leftAnimate(3)} >
+                        <motion.p className="about-me-p" variants={leftAnimate(0.6)}>
+                            My academic journey has equipped me with a keen analytical mindset
+                            and a thirst for knowledge. I am particularly drawn to an
+                            Developer and aspire to contribute my expertise to innovative
+                            projects. With a genuine interest in Fullstack developer, I am
+                            excited about the prospect of combining my academic knowledge with
+                            practical applications in a professional setting.
+                        </motion.p>
+                        {/* <motion.div variants={leftAnimate(0.9)} >
                             <motion.div
                                 className="about-me-tab"
                             >
@@ -185,36 +187,51 @@ function About() {
                                             : "about-me-content"
                                     }
                                 >
-                                    <ul>
+                                    <ul className="flex gap-4">
+                                        <motion.li 
+                                            variants={timing(0.1)}
+                                        >
+                                            <span><img src={img3} className="w-12 h-12" /></span>
+                                        </motion.li>
                                         <motion.li 
                                             variants={timing(0.2)}
                                         >
-                                            <span>Java</span>
+                                            <span><img src={img1} className="w-12 h-12" /></span>
+                                        </motion.li>
+                                        <motion.li 
+                                            variants={timing(0.3)}
+                                        >
+                                            <span><img src={img6} className="w-12 h-12" /></span>
                                         </motion.li>
                                         <motion.li 
                                             variants={timing(0.4)}
                                         >
-                                            <span>Python</span>
+                                            <span><img src={img2} className="w-12 h-12" /></span>
+                                        </motion.li>
+                                        <motion.li 
+                                            variants={timing(0.5)}
+                                        >
+                                            <span><img src={img5} className="w-12 h-12" /></span>
                                         </motion.li>
                                         <motion.li 
                                             variants={timing(0.6)}
                                         >
-                                            <span>MERN Stack</span>
+                                            <span><img src={img7} className="w-12 h-12" /></span>
+                                        </motion.li>
+                                        <motion.li 
+                                            variants={timing(0.7)}
+                                        >
+                                            <span><img src={img8} className="w-12 h-12" /></span>
                                         </motion.li>
                                         <motion.li 
                                             variants={timing(0.8)}
                                         >
-                                            <span>HTML</span>
+                                            <span><img src={img9} className="w-12 h-12" /></span>
                                         </motion.li>
                                         <motion.li 
-                                            variants={timing(1)}
+                                            variants={timing(0.9)}
                                         >
-                                            <span>CSS</span>
-                                        </motion.li>
-                                        <motion.li 
-                                            variants={timing(1.2)}
-                                        >
-                                            <span>Tailwind CSS</span>
+                                            <span><img src={img10} className="w-12 h-12" /></span>
                                         </motion.li>
                                     </ul>
                                 </motion.div>
@@ -248,7 +265,7 @@ function About() {
                                             variants={timing(0.6)}
                                         >
                                             <span>
-                                                Participated in "09th Annual ISTE TamilNadu Section
+                                                Participated in "09<sup>th</sup> Annual ISTE TamilNadu Section
                                                 Polytechnic Student's Convention of Project Contest"
                                                 (04/2022 - 04/2022)
                                             </span>
@@ -294,18 +311,21 @@ function About() {
                                             variants={timing(0.4)}
                                         >
                                             <span>
-                                                Secured third rank in III semester in PSG Polytechnic
-                                                college (06/2019 - 0e/2020)
+                                                Secured third rank in 3<sup>rd</sup> semester in PSG Polytechnic
+                                                college (06/2019 - 05/2020)
                                             </span>
                                         </motion.li>
                                     </ul>
                                 </motion.div>
                             </motion.div>
-                        </motion.div>
+                        </motion.div> */}
                     </motion.div>
                     <div className="about-me-right">
-                        <motion.div variants={rightAnimate()} whileInView={{delay:1}} className="about-me-img-right">
-                            <img src={img4} alt="" />
+                        <motion.div
+                            variants={rightAnimate()}
+                            className="about-me-img-right"
+                        >
+                            <motion.img src={img4} alt="" />
                         </motion.div>
                     </div>
                 </motion.div>

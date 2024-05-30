@@ -8,7 +8,7 @@ const PDF_URL = "SOLOMON_A - RESUME.pdf";
 const cardVariants = (time) => {
     return {
         offscreen: {
-            x: 600,
+            x: 400,
             opacity: 0,
         },
         onscreen: {
@@ -18,7 +18,7 @@ const cardVariants = (time) => {
                 type: "spring",
                 bounce: 0.3,
                 duration: 2.2,
-                delay:time
+                delay: time,
             },
         },
     };
@@ -62,18 +62,32 @@ function Home() {
             className="home-view"
             id="home"
         >
-            <div className="home-left">
-                <div className="home-box"></div>
+            <motion.div variants={cardVariantsimg} className="home-left">
                 <motion.img
-                    variants={cardVariantsimg}
+                    variants={{
+                        initial: {
+                            y: -15,
+                        },
+                        animate: {
+                            y: [15, -15],
+                            transition: {
+                                duration: 1.2,
+                                ease: "easeInOut",
+                                repeat: Infinity,
+                                repeatType: "reverse",
+                            },
+                        },
+                    }}
+                    initial="initial"
+                    animate="animate"
                     src={image}
                     className="home-img"
                     alt=""
                 />
-            </div>
+            </motion.div>
             <div className="home-right">
                 <motion.h1 variants={cardVariants(0.2)} className="home-h1-me">
-                    Hi, I am Solomon
+                    Hi, I am Solomon A
                 </motion.h1>
                 <motion.h5 variants={cardVariants(0.4)} className="home-h5-me">
                     FullStack Developer

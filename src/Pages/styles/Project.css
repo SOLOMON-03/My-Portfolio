@@ -1,35 +1,68 @@
-.project{
-    padding: 50px 0;
+.project {
+    box-shadow: 2px 10px 15px 7px rgba(0, 0, 0, 0.1);
+    margin: 6rem 2rem;
+    padding: 6rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #112A46;
+    background-color: #f4f1de;
 }
-.project-sub-title{
+
+.project-sub-title {
     text-align: center;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 0.2rem;
-    color: #264346;
+    font-weight: 600;
 }
-.project-list{
+
+.project-list {
     display: flex;
-    gap: 1.2rem;
+    flex-wrap: wrap;
+    gap: 2rem;
     width: 100%;
-    margin-top: 50px;
+    margin: 1rem 0;
     justify-content: center;
 }
-.project-img{
-    border-radius: 10px;
+
+.tiltcard {
     position: relative;
-    overflow: hidden;
-    background: #FFFEF8;
-    padding: 4px;
-    width: 400px;
-}
-.project-img img{
-    width: 100%;
+    width: 300px;
+    height: 400px;
+    background-color: #112A46;
+    margin: 0 20px;
     border-radius: 10px;
-    object-fit: cover;
-    transition: transform 0.8s;
+    border: 1px solid rgba(225, 225, 225, 0.18);
+    transform-style: preserve-3d;
 }
-.project-layer{
+
+.tiltcard::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(30deg,
+            #4b6cb7,
+            #182848);
+    filter: blur(8px);
+    transition: 0.6s ease;
+}
+
+.tiltcard::before {
+    clip-path: ellipse(0% 0% at 0 0)
+}
+
+.tiltcard:hover::before {
+    clip-path: ellipse(150% 150% at 0 0);
+}
+
+.tiltcard:hover {
+    transition: 0.6s ease;
+    filter: drop-shadow(0px 3px 1px #182848);
+}
+
+.project-layer {
     padding: 8px;
     display: flex;
     justify-content: center;
@@ -37,58 +70,95 @@
     flex-direction: column;
     text-align: center;
 }
-.project-layer h3{
+
+.project-layer h3 {
+    z-index: 1;
     margin: 0;
-    padding:0 20px;
+    padding: 15px 20px;
     font-size: 1.2rem;
-    color: chocolate;
+    font-weight: 600;
+    color: #f4f1de;
 }
-.project-layer p{
-    padding:0 20px;
-    color: #0D2123;
-}   
-.project-layer a{
+
+.project-layer:hover {
+    color: white;
+    transition: 0.6s ease-in-out;
+}
+
+.project-layer p {
+    z-index: 1;
+    padding: 0 15px;
+    font-size: 1rem;
+    color: #ACC8E5;
+}
+
+.project-layer .link-a {
+    font-size: 3rem;
+    position: absolute;
+    left: 15px;
+    top: 340px;
+    display: flex;
+}
+
+.live {
     color: #FFFEF8;
     text-decoration: none;
-    background-color: #0D2123;
-    padding: 8px;
-    border-radius: 5px;
 }
-.project-layer a:hover{
-    box-shadow: 0px 4px 10px 6px #6ef3ff;
-    color: #6ef3ff;
+
+.github {
+    color: #FFFEF8;
+    text-decoration: none;
+    width: 50px;
+    height: 50px;
 }
-.project-img:hover{
-    box-shadow: 0px 5px 20px #0D2123;
-}
-.project-img img:hover{
+
+.live:hover,
+.github:hover {
+    filter: drop-shadow(1px 6px 8px #0D2123);
     transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+    color: #e7e5da;
 }
-@media (max-width:1170px){
-    .project-layer h3{
-        padding:0 0;
-        font-size: 1rem;
-    }
-    .project-layer p{
-        padding:0 0;
-    }  
+
+p.date-p {
+    font-size: 0.7rem;
+    color: white;
 }
-@media (max-width:800px){
-    .project-layer h3{
-        font-size: 0.8rem;
+
+.date-p {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+@media (max-width:600px) {
+    .project {
+        box-shadow: 2px 10px 15px 7px rgba(0, 0, 0, 0.1);
+        padding: 2rem 2rem;
     }
-    .project-layer p{
+
+    .tiltcard {
+        position: relative;
+        width: 230px;
+        height: 300px;
+    }
+
+    .project-layer h3 {
+        padding: 15px 20px;
+        font-size: 0.9rem;
+    }
+
+    .project-layer p {
         font-size: 0.7rem;
-    }  
-}
-@media (max-width:580px){
-    .project-list{
-        flex-direction: column;
-        align-items: center;
     }
-}
-@media (max-width:480px){
-    .project-img{
-        width: 300px;
+
+    p.date-p {
+        font-size: 0.5rem;
+        color: white;
+    }
+
+    .project-layer .link-a {
+        font-size: 2rem;
+        top: 240px;
     }
 }

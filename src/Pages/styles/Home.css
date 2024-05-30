@@ -1,53 +1,63 @@
-.home-view{
+.home-view {
     display: flex;
     justify-items: center;
     align-items: center;
     width: 100%;
-    background-color: #264346;
+    background-color: #112A46;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 600px;
     margin-bottom: 2rem;
 }
-.home-left{
+
+.home-left {
     width: 40%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.home-right{
+
+.home-right {
     width: 60%;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
-.home-img{
+
+.home-img {
     width: 400px;
-    background-color: #264346;
-    border-radius: 27% 73% 70% 30% / 30% 38% 62% 70% ;
+    background-color: #f4f1de;
+    border-radius: 27% 73% 70% 30% / 30% 38% 62% 70%;
     transition: border-radius 900ms ease-in-out;
-    filter: drop-shadow(16px 12px 5px #0D2123 );
+    filter: drop-shadow(8px 2px 5px #ACC8E5);
     cursor: pointer;
 }
-.home-img:hover{
-    border-radius: 76% 24% 45% 55% / 47% 33% 67% 53% ;
 
+.home-img:hover {
+    border-radius: 76% 24% 45% 55% / 47% 33% 67% 53%;
 }
-.home-box{
-    width: 100px;
-}
-.home-h1-me{
+
+.home-h1-me {
     font-size: 4rem;
-    color: #e7e5da;
+    color: #f4f1de;
     margin: 0;
 }
-.home-h5-me{
+
+.home-h5-me {
     font-size: 2rem;
-    color: #F8CFA9;
+    background: #f4f1de;
+    background: linear-gradient(to right, #f4f1de 0%, #ACC8E5 28%, #f4f1de 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin: 0;
     font-weight: 200;
 }
-.home-p-me{
-    font-size: 1.25rem;
-    color: #FFFEF8;
+
+.home-p-me {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #ACC8E5;
     text-align: justify;
 }
-.home-button{
+
+.home-button {
     padding: 1rem;
     border-radius: 15px 3px 15px 3px;
     outline: none;
@@ -56,67 +66,76 @@
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     font-weight: 600;
-    color: #FFFEF8;
-    background-color: #0D2123;
-    box-shadow: 3px 4px 8px #FFFEF8;
+    color: #112A46;
+    background-color: #f4f1de;
+    box-shadow: 2px 3px 6px #c6c6c7;
     cursor: pointer;
     scale: 1;
 }
-.home-button:hover{
+
+.home-button:hover {
     rotate: 3deg;
     scale: 1.05;
-    color: #0D2123;
-    background-color: #FFFEF8;
-    box-shadow: 3px 8px 8px #0D2123;
+    background-color: #ACC8E5;
+    box-shadow: 2px 3px 6px #f4f1de;
     transition: 0.6s ease-in-out;
 }
 
-@media (max-width: 1080px){
-    .home-img{
+@media (max-width: 1080px) {
+    .home-img {
         width: 300px;
     }
-    .home-h1-me{
+
+    .home-h1-me {
         font-size: 2rem;
     }
-    .home-h5-me{
+
+    .home-h5-me {
         font-size: 1.5rem;
         font-weight: 100;
     }
-    .home-p-me{
+
+    .home-p-me {
         font-size: 0.8rem;
     }
 }
-@media (max-width: 775px){
-    .home-img{
+
+@media (max-width: 775px) {
+    .home-img {
         width: 250px;
     }
 }
-@media (max-width: 590px){
-    .home-view{
+
+@media (max-width: 590px) {
+    .home-view {
         flex-direction: column;
-        height: 550px;
+        height: 600px;
     }
-    .home-left{
+
+    .home-left {
         padding-top: 4rem;
         width: 100%;
     }
-    .home-right{
+
+    .home-right {
         padding: 0.7rem;
-        width: 90%;
+        width: 100%;
     }
 }
-@media (max-width:450px){
-    .home-button{
+
+@media (max-width:450px) {
+    .home-button {
         padding: 0.5rem;
         font-size: 0.5rem;
         letter-spacing: 0rem;
         font-weight: 500;
     }
-    
-    .home-h1-me{
+
+    .home-h1-me {
         font-size: 1.5rem;
     }
-    .home-h5-me{
+
+    .home-h5-me {
         font-size: 1rem;
         font-weight: 100;
     }

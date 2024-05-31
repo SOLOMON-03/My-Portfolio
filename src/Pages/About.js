@@ -29,7 +29,7 @@ function About() {
     const rightAnimate = () => {
         return {
             offscreen: {
-                x: -300,
+                x: -50,
                 opacity: 0,
             },
             onscreen: {
@@ -72,7 +72,7 @@ function About() {
                 initial="offscreen"
                 whileInView="onscreen"
                 viewport={{ once: false, amount: 0.2 }}
-                className="about-me-container m-24 flex justify-center items-center"
+                className="about-me-container flex justify-center items-center"
                 id="about"
             >
                 <motion.div className="about-me-row">

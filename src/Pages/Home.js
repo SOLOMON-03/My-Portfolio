@@ -8,7 +8,7 @@ const PDF_URL = "SOLOMON_A - RESUME.pdf";
 const cardVariants = (time) => {
     return {
         offscreen: {
-            x: 400,
+            x: 50,
             opacity: 0,
         },
         onscreen: {

@@ -72,8 +72,8 @@ const tools = [
         label: "Expressjs",
         icon: img9,
         delay: (Math.random() * 2 + 1).toFixed(1),
-        shadow: "hover:shadow-[0_10px_20px_rgba(0,_0,_0,_1)]",
-        mobile: "max-md:shadow-[0_10px_20px_rgba(0,_0,_0,_1)]",
+        shadow: "hover:shadow-[0_10px_20px_rgba(225,_225,_225,_225)]",
+        mobile: "max-md:shadow-[0_10px_20px_rgba(225,_225,_225,_225)]",
     },
     {
         label: "Figma",
@@ -86,7 +86,7 @@ const tools = [
 
 const Technologies = () => {
     return (
-        <motion.div className="p-24 flex justify-center items-center flex-col gap-7 ">
+        <motion.div className="flex justify-center items-center flex-col gap-7 ">
             <div>
                 <motion.h1
                     whileInView={{ opacity: 1, y: 0 }}

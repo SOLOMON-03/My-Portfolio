@@ -133,8 +133,8 @@ p.date-p {
 
 @media (max-width:600px) {
     .project {
-        box-shadow: 2px 10px 15px 7px rgba(0, 0, 0, 0.1);
         padding: 2rem 2rem;
+        margin: 6rem 0;
     }
 
     .tiltcard {
@@ -142,9 +142,16 @@ p.date-p {
         width: 230px;
         height: 300px;
     }
+    
+    .project-sub-title {
+        text-align: center;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        font-weight: 600;
+    }
 
     .project-layer h3 {
-        padding: 15px 20px;
         font-size: 0.9rem;
     }
 

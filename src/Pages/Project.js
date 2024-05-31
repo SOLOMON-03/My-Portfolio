@@ -36,13 +36,14 @@ function Project() {
         <div className="project">
             <div className="project-container">
                 <motion.h1
-                    initial={{ opacity: 0, x: 100 }}
+                    initial={{ opacity: 0, x: 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{
-                        duration: 2,
+                        duration: 1,
                         ease: "easeInOut",
                         bounce: 0.5,
                         type: "spring",
+                        delay:0.2
                     }}
                     className="project-sub-title"
                 >
@@ -52,7 +53,7 @@ function Project() {
                     {project.map((data, index) => {
                         return (
                             <motion.div
-                                initial={{ opacity: 0, x: -100 }}
+                                initial={{ opacity: 0, x: -50 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{
                                     duration: 2,
@@ -68,19 +69,15 @@ function Project() {
                                     <h3>{data.title}</h3>
                                     <p>{data.desc}</p>
                                     <div className="link-a">
-                                        {data.hub !== "" ? (
+                                        {data.hub && (
                                             <a className="github" href={data.hub}>
                                                 <FaGithub />
                                             </a>
-                                        ) : (
-                                            ""
                                         )}
-                                        {data.live !== "" ? (
+                                        {data.live && (
                                             <a className="live" href={data.live}>
                                                 <SiLivewire />
                                             </a>
-                                        ) : (
-                                            ""
                                         )}
                                     </div>
                                     <p className="date-p">{data.date}</p>

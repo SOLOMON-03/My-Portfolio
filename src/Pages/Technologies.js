@@ -86,7 +86,7 @@ const tools = [
 
 const Technologies = () => {
     return (
-        <motion.div className="flex justify-center items-center flex-col gap-7 ">
+        <motion.div className="flex justify-center items-center flex-col gap-10 ">
             <div>
                 <motion.h1
                     whileInView={{ opacity: 1, y: 0 }}
@@ -101,17 +101,17 @@ const Technologies = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -50 }}
                 transition={{ duration: 1.5, delay: 0.4 }}
-                className="flex gap-2 flex-wrap justify-center"
+                className="flex gap-2 flex-wrap justify-center py-10 "
             >
                 {tools.map((data, index) => {
                     return (
                         <motion.div
                             variants={{
                                 initial: {
-                                    y: -15,
+                                    y: -10,
                                 },
                                 animate: {
-                                    y: [15, -15],
+                                    y: [10, -10],
                                     transition: {
                                         duration: data.delay,
                                         ease: "easeInOut",
@@ -125,14 +125,14 @@ const Technologies = () => {
                             key={index}
                             className={`flex cursor-pointer border w-28 h-28 max-md:w-20 max-md:h-20 border-none rounded-lg justify-center 
                             items-center flex-col gap-2 mb-8 tech-skill ${data.shadow} ${data.mobile} text-[#ACC8E5]  hover:text-[#112A46] 
-                            hover:bg-[#ACC8E5] transition duration-500 ease-in-out`}
+                            hover:bg-[#ACC8E5] transition-colors duration-500 ease-in-out `}
                         >
                             <motion.img
                                 className="w-12 h-12 max-md:w-9 max-md:h-9 transition duration-500 ease-in-out hover:scale-[1.1] "
                                 src={data.icon}
                                 alt=""
                             />
-                            <label className="max-md:text-[12px] ">
+                            <label className="max-md:text-[12px]">
                                 {data.label}
                             </label>
                         </motion.div>

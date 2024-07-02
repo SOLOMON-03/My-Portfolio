@@ -6,12 +6,28 @@ import "./styles/Project.css";
 
 const project = [
     {
+        title: "Property Provision using Mobile Applicaton",
+        desc: "This project proposes that rent or sale the home or land property using mobile application with an help of React Native, Expo, Nativewind and Appwrite. It will helpful when it comes under to the mobile application, that user can easily manage the details in App.",
+        live: "https://expo.dev/artifacts/eas/xgnubKLRvgiwutdHYZyDv2.apk",
+        hub: "https://github.com/SOLOMON-03/App-PropertyProvision-Using-ReactNative.git",
+        date: "06/2024 - 06/2024",
+        delay: 0.2,
+    },
+    {
+        title: "Flexspace using Front-end Development",
+        desc: "This project proposes that giving office space for client to work and its mainly created for learning purpose in Animation using Aos(Animation on Scroll) and basically it just frontend.",
+        live: "https://flexspace.vercel.app",
+        hub: "https://github.com/SOLOMON-03/FLEXSPACE.git",
+        date: "03/2024 - 03/2024",
+        delay: 0.4,
+    },
+    {
         title: "Property Provision Portal with MERN Stack",
         desc: "This project proposes an website to rent or sale the home or land property, It comes under mern stack. It helps to people to buy or sell the property through an online.",
         live: "https://property-provision.onrender.com/",
         hub: "https://github.com/SOLOMON-03/MERN-STACK.git",
         date: "10/2023 - 01/2024",
-        delay: 0.2,
+        delay: 0.6,
     },
     {
         title: "Movie rental using MySQL database in Java",
@@ -19,7 +35,7 @@ const project = [
         live: "",
         hub: "https://github.com/SOLOMON-03/MOVIERENTAL-USING-DATABASE.git",
         date: "06/2023 - 08/2023",
-        delay: 0.4,
+        delay: 0.8,
     },
     {
         title: "Audio and Text Transmission Using Li-Fi",
@@ -27,7 +43,7 @@ const project = [
         live: "",
         hub: "",
         date: "06/2021 - 05/2022",
-        delay: 0.6,
+        delay: 1,
     },
 ];
 

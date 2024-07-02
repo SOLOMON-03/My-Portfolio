@@ -9,6 +9,8 @@ import img8 from "../Assets/tailwind-css.256x154.png";
 import img9 from "../Assets/icons8-express-js-50.png";
 import img10 from "../Assets/mongodb.png";
 import img11 from "../Assets/figma.png";
+import img12 from "../Assets/Spring.png";
+import img13 from "../Assets/appwrite.png";
 import { motion } from "framer-motion";
 
 const tools = [
@@ -81,6 +83,20 @@ const tools = [
         delay: (Math.random() * 2 + 1).toFixed(1),
         shadow: "hover:shadow-[0_10px_20px_rgba(124,_77,_255,_1)]",
         mobile: "max-md:shadow-[0_10px_20px_rgba(124,_77,_255,_1)]",
+    },
+    {
+        label: "Appwrite",
+        icon: img13,
+        delay: (Math.random() * 2 + 1).toFixed(1),
+        shadow: "hover:shadow-[0_10px_20px_rgba(240,_46,_101,_1)]",
+        mobile: "max-md:shadow-[0_10px_20px_rgba(240,_46,_101,_1)]",
+    },
+    {
+        label: "Spring Boot",
+        icon: img12,
+        delay: (Math.random() * 2 + 1).toFixed(1),
+        shadow: "hover:shadow-[0_10px_20px_rgba(119,_188,_31,_1)]",
+        mobile: "max-md:shadow-[0_10px_20px_rgba(119,_188,_31,_1)]",
     },
 ];
 

@@ -8,7 +8,7 @@ const project = [
     {
         title: "Property Provision using Mobile Applicaton",
         desc: "This project proposes that rent or sale the home or land property using mobile application with an help of React Native, Expo, Nativewind and Appwrite. It will helpful when it comes under to the mobile application, that user can easily manage the details in App.",
-        live: "https://expo.dev/artifacts/eas/xgnubKLRvgiwutdHYZyDv2.apk",
+        live: "https://expo.dev/artifacts/eas/aWVsfW1YQsAZseTNYfFnzF.apk",
         hub: "https://github.com/SOLOMON-03/App-PropertyProvision-Using-ReactNative.git",
         date: "06/2024 - 06/2024",
         delay: 0.2,
